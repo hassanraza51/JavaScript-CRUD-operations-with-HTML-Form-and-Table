@@ -1,0 +1,58 @@
+body > table {
+  width: auto;
+}
+form {
+  background-color: lightgray;
+}
+h1 {
+  background-color: lightgreen;
+}
+table {
+  border-collapse: collapse;
+}
+table.list {
+  border: 1px solid black;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even),
+table.list thead > tr {
+  background-color: #dddddd;
+}
+
+input,
+select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="submit"],
+input[type="reset"] {
+  margin: 20px;
+}
+form div.form-action-buttons {
+  text-align: left;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0000ee;
+  margin-right: 4px;
+}
+
+label.validation-error {
+  color: red;
+  margin-left: 5px;
+}
+
+.hide {
+  display: none;
+}

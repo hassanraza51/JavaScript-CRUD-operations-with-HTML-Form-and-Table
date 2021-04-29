@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <link href="./style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onreset="resetForm();" onclick="updateRecord(formData);" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off"><h1>Add/Update Person Form</h1>
+                    <div>
+                        <label><b>Name:</b>&emsp;&emsp;</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName" pattern="[A-Za-z\s]+" title="Name must be in alphabets" maxlength="10">
+                    </div>
+                    <div>
+                        <label><b>Gender:</b>&emsp;&emsp;</label>
+                        <input type="radio" name="gender" id="gender" value="Male"> Male&emsp;&emsp;
+                        <input type="radio" name="gender" id="gender" value="Female"> Female&emsp;&emsp;
+                    </div>
+                    <div>
+                        <label><b>Age:</b>&emsp;&emsp;</label>
+                        <input type="number" min="10" max="50" name="age" id="age">
+                    </div>
+                    <div>
+                        <label><b>City:</b>&emsp;&emsp;</label>
+                        <select name="city" id="city">
+                            <option value="Jhang">Jhang</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Multan">Multan</option>
+                        </select>
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Add">
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Update" id="update">
+                        
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList"><h1>List of Persons</h1>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
